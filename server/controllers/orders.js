@@ -15,29 +15,36 @@ class Controller {
   }
 
   static create(req, res, next) {
-    // const {
-    //   customerId = new Date().getTime(),
-    //   name,
-    //   "description": "Kinda Tasty",
-    //   "price": 12000,
-    //   "quantity": 1,
-    //   "staffId": "",
-    //   "status": "ORDERED"
-    // }
-    return res.status(200).json(orders)
+    const ordersPayload = (req.body) // array of JSON
+
+    const orders = require('./orders.json')
+    const latestId = orders[orders.length - 1].id
+
+    ordersPayload.forEach((order, index) => {
+      order.id = latestId + 1 + index
+      order.customerId = new Date().getTime()
+      order.status = 'ORDERED'
+      orders.push(order)
+    });
+
+    fs.writeFileSync('./controllers/orders.json', JSON.stringify(orders, null, 2), 'utf-8')
+
+    return res.status(200).json('OK')
   }
 
   static update(req, res, next) {
     // takes customerId and status as parameter
-    const { status } = req.query
+    const { customerId, status } = req.body
 
     const orders = require('./orders.json')
 
-    if (status) {
-      const filteredOrders = orders.filter()
-    }
+    orders.forEach(order => {
+      if (order.customerId === +customerId) {
+        order.status = status
+      }
+    });
 
-    console.log({ orders })
+    fs.writeFileSync('./controllers/orders.json', JSON.stringify(orders, null, 2), 'utf-8')
 
     return res.status(200).json(orders)
   }

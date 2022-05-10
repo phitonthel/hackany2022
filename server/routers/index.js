@@ -10,5 +10,6 @@ router.get('/', (req, res) => {
 // order
 router.get('/orders', orders.get)
 router.post('/orders', orders.create)
+router.patch('/orders', orders.update)
 
 module.exports = router

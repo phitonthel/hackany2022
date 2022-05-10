@@ -28,5 +28,45 @@
     "quantity": 1,
     "staffId": "",
     "status": "DELIVERED"
+  },
+  {
+    "customerId": 1652150824898,
+    "name": "Mie Goreng",
+    "description": "Very Tasty",
+    "price": 10000,
+    "quantity": 1,
+    "staffId": "staff1",
+    "id": 4,
+    "status": "ORDERED"
+  },
+  {
+    "customerId": 1652150824898,
+    "name": "Nasi Goreng",
+    "description": "Kinda Tasty",
+    "price": 12000,
+    "quantity": 1,
+    "staffId": "staff1",
+    "id": 5,
+    "status": "ORDERED"
+  },
+  {
+    "customerId": 1652150828759,
+    "name": "Mie Goreng",
+    "description": "Very Tasty",
+    "price": 10000,
+    "quantity": 1,
+    "staffId": "staff1",
+    "id": 6,
+    "status": "DELIVERED"
+  },
+  {
+    "customerId": 1652150828759,
+    "name": "Nasi Goreng",
+    "description": "Kinda Tasty",
+    "price": 12000,
+    "quantity": 1,
+    "staffId": "staff1",
+    "id": 7,
+    "status": "DELIVERED"
   }
 ]
