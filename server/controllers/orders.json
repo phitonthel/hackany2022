@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "customerId": "royhan",
+    "name": "Mie Goreng",
+    "description": "Very Tasty",
+    "price": 10000,
+    "quantity": 1,
+    "staffId": "",
+    "status": "ORDERED"
+  },
+  {
+    "id": 2,
+    "customerId": "royhan",
+    "name": "Nasi Goreng",
+    "description": "Kinda Tasty",
+    "price": 12000,
+    "quantity": 1,
+    "staffId": "",
+    "status": "ORDERED"
+  },
+  {
+    "id": 3,
+    "customerId": "phitonthel",
+    "name": "Nasi Goreng",
+    "description": "Kinda Tasty",
+    "price": 12000,
+    "quantity": 1,
+    "staffId": "",
+    "status": "DELIVERED"
+  }
+]
