@@ -29,7 +29,7 @@ class Controller {
 
     fs.writeFileSync('./controllers/orders.json', JSON.stringify(orders, null, 2), 'utf-8')
 
-    return res.status(200).json('OK')
+    return res.status(200).json(orders)
   }
 
   static update(req, res, next) {
