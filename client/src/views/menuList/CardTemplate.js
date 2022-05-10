@@ -6,14 +6,17 @@ function CardTemplate({
   price,
   quantity,
   onMinusHandler,
-  onPlusHandler
+  onPlusHandler,
+  onHeartHandler
 }) {
   return (
     <div className="col-sm-6 col-md-6 col-lg-4">
       <div className="food-card">
         <div className="food-card_img">
           <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
-          <a href="#!"><i className="far fa-heart"></i></a>
+          <a onClick={() => onHeartHandler()}>
+            <i className="far fa-heart"></i>
+          </a>
         </div>
         <div className="food-card_content">
           <div className="food-card_title-section">

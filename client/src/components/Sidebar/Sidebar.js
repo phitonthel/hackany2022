@@ -49,7 +49,7 @@ function Sidebar({ color, image, routes }) {
             </div>
           </a>
           <a className="simple-text" href="">
-            Men United
+            Menu-nited
           </a>
         </div>
         <Nav>

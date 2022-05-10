@@ -35,8 +35,8 @@ function MenuList() {
     ])
 
     showOrdered()
-    setTimeout(() => Swal.close(), 6000);
-    setTimeout(() => showAccepted(), 12000);
+    // setTimeout(() => Swal.close(), 6000);
+    // setTimeout(() => showAccepted(), 12000);
   }
 
   const showOrdered = () => {
@@ -65,6 +65,10 @@ function MenuList() {
     })
   }
 
+  const onHeartHandler = () => {
+    showAccepted()
+  }
+
   return (
     <div className='container'>
       <div className='row justify-content-center'>
@@ -79,6 +83,9 @@ function MenuList() {
           onPlusHandler={() => {
             setNasiGorengQty(nasiGorengQty + 1)
           }}
+          onHeartHandler={() => {
+            onHeartHandler()
+          }}
         />
         <CardTemplate
           title={'Burger'}
@@ -90,6 +97,9 @@ function MenuList() {
           }}
           onPlusHandler={() => {
             setBurgerQty(burgerQty + 1)
+          }}
+          onHeartHandler={() => {
+            onHeartHandler()
           }}
         />
 
@@ -105,7 +115,7 @@ function MenuList() {
         </button>
         {/* <input
           type="submit"
-          style="display: none;"
+          style={{ display: 'none'}}
           onClick={() => showAccepted()}
         /> */}
       </div>
