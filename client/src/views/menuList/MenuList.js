@@ -35,8 +35,8 @@ function MenuList() {
     ])
 
     showOrdered()
-    setTimeout(() => Swal.close(), 4000);
-    setTimeout(() => showAccepted(), 8000);
+    setTimeout(() => Swal.close(), 6000);
+    setTimeout(() => showAccepted(), 12000);
   }
 
   const showOrdered = () => {

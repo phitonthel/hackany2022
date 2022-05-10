@@ -18,7 +18,7 @@ class Controller {
     const ordersPayload = (req.body) // array of JSON
 
     const orders = require('./orders.json')
-    const latestId = orders[orders.length - 1].id
+    const latestId = orders.length > 0 ? orders[orders.length - 1].id : 0
 
     ordersPayload.forEach((order, index) => {
       order.id = latestId + 1 + index
@@ -27,6 +27,7 @@ class Controller {
       orders.push(order)
     });
 
+    console.log(orders,'==========================')
     fs.writeFileSync('./controllers/orders.json', JSON.stringify(orders, null, 2), 'utf-8')
 
     return res.status(200).json(orders)
